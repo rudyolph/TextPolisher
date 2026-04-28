@@ -1,0 +1,21 @@
+# Environment variables (CRITICAL - DO NOT PUBLISH)
+.env
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+*.log
+text_polisher.log
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini

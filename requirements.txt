@@ -1,0 +1,6 @@
+pystray
+Pillow
+keyboard
+pyperclip
+google-genai
+python-dotenv
