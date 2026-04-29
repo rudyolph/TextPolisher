@@ -4,3 +4,4 @@ keyboard
 pyperclip
 google-genai
 python-dotenv
+pyinstaller
