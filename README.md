@@ -26,14 +26,13 @@ If you just want to use the app without touching any code:
 
 ### 1. Installation
 
-Clone the repository and set up a virtual environment:
+Clone the repository and set up a virtual environment using `uv`:
 
 ```powershell
 git clone https://github.com/YOUR_USERNAME/TextPolisher.git
 cd TextPolisher
-python -m venv venv
-.\venv\Scripts\activate
-pip install -r requirements.txt
+uv venv
+uv pip install -r requirements.txt
 ```
 
 ### 2. Configuration
@@ -66,7 +65,7 @@ To have TextPolisher start automatically when you log in, run the following in a
 
 ```powershell
 $WorkingDir = "C:\Projects\TextPolisher" # Update to your actual path
-$PythonPath = "$WorkingDir\venv\Scripts\pythonw.exe"
+$PythonPath = "$WorkingDir\.venv\Scripts\pythonw.exe"
 $Action = New-ScheduledTaskAction -Execute $PythonPath -Argument "text_polisher.py" -WorkingDirectory $WorkingDir
 $Trigger = New-ScheduledTaskTrigger -AtLogOn
 $Principal = New-ScheduledTaskPrincipal -UserId "$env:USERNAME" -LogonType Interactive -RunLevel Highest
